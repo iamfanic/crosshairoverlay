@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://idv2kohmqrm3"]
+
+[ext_resource type="Texture2D" uid="uid://t1fg84i32tch" path="res://icons/mic_on.png" id="1_daed8"]
+[ext_resource type="Script" uid="uid://0qd2wyof3sse" path="res://scene/mic/mic_icon.gd" id="2_daed8"]
+
+[sub_resource type="GDScript" id="GDScript_8obap"]
+script/source = "extends Window
+
+# generate Send window in central Sreen  
+func _ready() -> void:
+	borderless = false
+	print(\"jasdkjlashdasd\")
+	var screen_size := DisplayServer.screen_get_size()
+	position = screen_size / 2 + Vector2i(-300,300)
+"
+
+[node name="Mic" type="Window"]
+transparent_bg = true
+size = Vector2i(80, 80)
+borderless = true
+always_on_top = true
+transparent = true
+unfocusable = true
+mouse_passthrough = true
+script = SubResource("GDScript_8obap")
+
+[node name="MicIcon" type="TextureRect" parent="."]
+offset_right = 80.0
+offset_bottom = 80.0
+texture = ExtResource("1_daed8")
+expand_mode = 1
+script = ExtResource("2_daed8")

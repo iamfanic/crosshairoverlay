@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://g4xon1noahtd"]
+
+[ext_resource type="Script" uid="uid://d05ph7675dh0b" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://idv2kohmqrm3" path="res://scene/mic/mic.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b3k4jk6bo6x64" path="res://scene/crosshair/crosshair.tscn" id="3_h2yge"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ig7tw")
+
+[node name="Mic" parent="." instance=ExtResource("2_0xm2m")]
+script = null
+
+[node name="Crosshair" parent="." instance=ExtResource("3_h2yge")]
