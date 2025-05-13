@@ -1,6 +1,15 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3k4jk6bo6x64"]
 
-[ext_resource type="Script" uid="uid://bjgynvth5adry" path="res://scene/crosshair/crosshair.gd" id="1_jtxav"]
+[ext_resource type="Script" uid="uid://jdg1oxe16upf" path="res://scene/crosshair/controller.gd" id="1_jtxav"]
 
-[node name="Crosshair" type="Node2D"]
+[node name="Crosshair" type="Window"]
+transparent_bg = true
+size = Vector2i(20, 20)
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+popup_window = true
+
+[node name="CrosshairPolygon" type="Polygon2D" parent="."]
 script = ExtResource("1_jtxav")

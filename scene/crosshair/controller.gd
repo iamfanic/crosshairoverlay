@@ -8,7 +8,7 @@ func _ready():
 func _draw():
 	if show_crosshair:
 		var screen_size = get_viewport_rect().size
-		draw_circle(screen_size / 2, 2, Color(0, 1, 0))  # 绿色圆点，半径为3
+		draw_circle(screen_size / 2, 2, Color(0, 1, 0))
 
 func _process(delta):
 	var has_joy = Input.get_connected_joypads().size() > 0
@@ -19,7 +19,6 @@ func _process(delta):
 			if show_crosshair:
 				show_crosshair = false
 		else:
-			
 			if not show_crosshair:
 				show_crosshair = true
 	
